@@ -1,2 +1,1 @@
 SimpleQRCodeExample
-test
