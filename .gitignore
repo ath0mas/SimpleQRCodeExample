@@ -1,4 +1,8 @@
-# Ignore Intellij IDEA project files
+# IntelliJ
 *.iml
 *.ipr
 *.iws
+.idea/
+
+# Java
+target/
