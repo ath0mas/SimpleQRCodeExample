@@ -3,7 +3,7 @@ package fr.alexisthomas.zxing.simpleexample;
 import org.junit.Test;
 
 /**
- * Test d'une boucle d'écriture lecture de code QR.
+ * Test for full QRCode write-read process.
  */
 public class BarCodeFullTest {
 

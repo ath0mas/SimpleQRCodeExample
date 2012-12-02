@@ -13,7 +13,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Test de la classe BarCodeWriter.
+ * Test {@link BarCodeWriter}.
  */
 public class BarCodeWriterTest {
 
@@ -32,10 +32,10 @@ public class BarCodeWriterTest {
         }
 
         File wrongSizeFile = BarCodeWriter.generateQRCodeFromText("http://www.alexisthomas.fr", 300, rootGeneratedPath);
-        File wrongGeneratedFile = BarCodeWriter.generateQRCodeFromText("valeur_erronee", 350, rootGeneratedPath);
+        File wrongGeneratedFile = BarCodeWriter.generateQRCodeFromText("wrong_value", 350, rootGeneratedPath);
         File rightGeneratedFile = BarCodeWriter.generateQRCodeFromText("http://www.alexisthomas.fr", 350, rootGeneratedPath);
 
-        assertFalse("Un BarCode de dimensions invalides ne devrait pas être correct.", compareBarCodeFiles(wrongSizeFile, imageTarget));
+        assertFalse("A BarCode with non valid dimensions should not be correct.", compareBarCodeFiles(wrongSizeFile, imageTarget));
         assertFalse(compareBarCodeFiles(wrongGeneratedFile, imageTarget));
         assertTrue(compareBarCodeFiles(rightGeneratedFile, imageTarget));
     }
@@ -62,20 +62,20 @@ public class BarCodeWriterTest {
             int width2 = ImageIO.read(file2).getWidth();
 
             if ((height1 != height2) || (width1 != width2)) {
-                System.out.println("Dimensions différentes");
+                System.out.println("Mismatch in dimensions");
                 return false;
             } else {
                 String text1 = BarCodeReader.getBarCodeTextFromFile(file1.getPath());
                 String text2 = BarCodeReader.getBarCodeTextFromFile(file2.getPath());
 
                 if (!text1.equals(text2)) {
-                    System.out.println("Textes encodés différents");
+                    System.out.println("Mismatch in encoded texts");
                     return false;
                 }
             }
 
         } catch (IOException e) {
-            System.out.println("Erreur lors de la lecture des fichiers");
+            System.out.println("Error while reading files");
             return false;
         } catch (ChecksumException e) {
             e.printStackTrace();
@@ -85,7 +85,7 @@ public class BarCodeWriterTest {
             e.printStackTrace();
         }
 
-        System.out.println("Dimensions et texte encodés corrects");
+        System.out.println("Correct dimensions et encoded text");
         return true;
     }
 
