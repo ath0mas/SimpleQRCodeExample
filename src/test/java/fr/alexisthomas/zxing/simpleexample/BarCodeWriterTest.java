@@ -43,11 +43,11 @@ public class BarCodeWriterTest {
     private static boolean deleteDirectory(File path) {
         if (path.exists()) {
             File[] files = path.listFiles();
-            for (int i = 0; i < files.length; i++) {
-                if (files[i].isDirectory()) {
-                    deleteDirectory(files[i]);
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    deleteDirectory(file);
                 } else {
-                    files[i].delete();
+                    file.delete();
                 }
             }
         }
@@ -77,11 +77,7 @@ public class BarCodeWriterTest {
         } catch (IOException e) {
             System.out.println("Error while reading files");
             return false;
-        } catch (ChecksumException e) {
-            e.printStackTrace();
-        } catch (NotFoundException e) {
-            e.printStackTrace();
-        } catch (FormatException e) {
+        } catch (ChecksumException | NotFoundException | FormatException e) {
             e.printStackTrace();
         }
 
