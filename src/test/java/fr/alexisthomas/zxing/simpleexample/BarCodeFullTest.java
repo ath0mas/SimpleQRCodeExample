@@ -1,5 +1,6 @@
 package fr.alexisthomas.zxing.simpleexample;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -7,6 +8,7 @@ import org.junit.Test;
  */
 public class BarCodeFullTest {
 
+    @Ignore("Empty test")
     @Test
     public void testFull() throws Exception {
 
