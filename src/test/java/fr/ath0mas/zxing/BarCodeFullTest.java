@@ -1,4 +1,4 @@
-package fr.ath0mas.zxing.simpleqrcodeexample;
+package fr.ath0mas.zxing;
 
 import org.junit.Ignore;
 import org.junit.Test;

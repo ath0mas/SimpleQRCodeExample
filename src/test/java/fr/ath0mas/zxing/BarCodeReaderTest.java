@@ -1,4 +1,4 @@
-package fr.ath0mas.zxing.simpleqrcodeexample;
+package fr.ath0mas.zxing;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;

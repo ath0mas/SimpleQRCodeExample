@@ -1,4 +1,4 @@
-package fr.ath0mas.zxing.simpleqrcodeexample;
+package fr.ath0mas.zxing;
 
 import java.io.File;
 import java.io.FileOutputStream;

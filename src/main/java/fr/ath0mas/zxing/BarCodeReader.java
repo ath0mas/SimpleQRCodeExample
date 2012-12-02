@@ -1,4 +1,4 @@
-package fr.ath0mas.zxing.simpleqrcodeexample;
+package fr.ath0mas.zxing;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
