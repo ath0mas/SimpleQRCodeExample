@@ -16,7 +16,7 @@ public class BarCodeReaderTest {
     public void testGetBarCodeTextFromFile() throws Exception {
         String imagePath = classLoader.getResource("chartQRCodeGenerated.png").getPath();
         String textRead = BarCodeReader.getBarCodeTextFromFile(imagePath);
-        assertThat(textRead, is("http://www.alexisthomas.fr"));
+        assertThat(textRead, is("http://www.ath0mas.fr"));
     }
 
 }

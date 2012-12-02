@@ -31,9 +31,9 @@ public class BarCodeWriterTest {
             deleteDirectory(rootGeneratedFolder);
         }
 
-        File wrongSizeFile = BarCodeWriter.generateQRCodeFromText("http://www.alexisthomas.fr", 300, rootGeneratedPath);
+        File wrongSizeFile = BarCodeWriter.generateQRCodeFromText("http://www.ath0mas.fr", 300, rootGeneratedPath);
         File wrongGeneratedFile = BarCodeWriter.generateQRCodeFromText("wrong_value", 350, rootGeneratedPath);
-        File rightGeneratedFile = BarCodeWriter.generateQRCodeFromText("http://www.alexisthomas.fr", 350, rootGeneratedPath);
+        File rightGeneratedFile = BarCodeWriter.generateQRCodeFromText("http://www.ath0mas.fr", 350, rootGeneratedPath);
 
         assertFalse("A BarCode with non valid dimensions should not be correct.", compareBarCodeFiles(wrongSizeFile, imageTarget));
         assertFalse(compareBarCodeFiles(wrongGeneratedFile, imageTarget));
