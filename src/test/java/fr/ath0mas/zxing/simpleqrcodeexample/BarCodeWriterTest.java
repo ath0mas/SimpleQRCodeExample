@@ -1,4 +1,4 @@
-package fr.alexisthomas.zxing.simpleexample;
+package fr.ath0mas.zxing.simpleqrcodeexample;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
